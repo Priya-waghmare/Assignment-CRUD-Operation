@@ -1,0 +1,10 @@
+/* .head
+{
+    margin-top: 50px;
+} */
+.main
+{
+    margin-top: 50px;
+    display: flex;
+    /* justify-content: space-around; */
+}

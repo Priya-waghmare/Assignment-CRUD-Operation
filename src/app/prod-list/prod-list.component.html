@@ -1,0 +1,35 @@
+<p>prod-list works!</p>
+<div>
+    <a routerLink="/cat-list">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            All Categories</button></a>
+ </div>
+<div class="tab">
+    <table class="table" style="width: 600px;">
+        <tr>
+            <th>Category ID</th>
+            <th>Category name</th>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+        <tr *ngFor="let data of prlist | paginate:{itemsPerPage:2,currentPage:p}">
+            <th>{{data.cat_id}}</th>
+            <th>{{data.cat_name}}</th>
+            <th>{{data.prod_id}}</th>
+            <th>{{data.prod_name}}</th>
+            <th><button class="btn1 " (click)="delId(data._id)">DELETE </button></th>
+            <th><button class="btn2" (click)="onedit(data._id)">UPDATE</button></th>
+        </tr>
+        <br><br><br>
+
+        <div class="add-emp">
+            <a routerLink="/add-prod">
+                <button type="button" class="btn3">Add Product</button>
+            </a>
+        </div>
+
+    </table>
+    <pagination-controls (pageChange)="p=$event"></pagination-controls>
+</div>

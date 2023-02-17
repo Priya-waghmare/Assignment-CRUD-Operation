@@ -1,0 +1,24 @@
+
+<div class="header">
+    <h1>Update Product Details</h1>
+  </div>
+  <div class="formcontrol">
+      <form [formGroup]="prodform" (ngSubmit)="updtprod(); prodform.reset();">
+        <label for="">Category ID:  </label>
+        <input type="number" formControlName="cat_id" placeholder="Enter Category Id">
+        <span style="color:red;" *ngIf="prodform.controls['cat_id'] && prodform.controls['cat_id'] .invalid && prodform.controls['cat_id'] .touched"> Required Field</span>
+        <label for="">Category Name:  </label>
+        <input type="text" formControlName="cat_name" placeholder="Enter Category Name">
+        <span style="color:red;" *ngIf="prodform.controls['cat_name'] && prodform.controls['cat_name'] .invalid && prodform.controls['cat_name'] .touched"> Required Field</span>
+         <label for="">Product ID:  </label>
+         <input type="number" formControlName="prod_id" placeholder="Enter Product Id">
+         <span style="color:red;" *ngIf="prodform.controls['prod_id'] && prodform.controls['prod_id'].touched && prodform.controls['prod_id'].invalid">Required Field</span> <br><br>
+         <label for="">Product Name:</label>
+         <input type="text" formControlName="prod_name" placeholder="Enter Product Name">
+         <span style="color:red;" *ngIf="prodform.controls['prod_name'] && prodform.controls['prod_name'].touched && prodform.controls['prod_name'].invalid">Required Field</span> <br><br>
+
+         <button type="submit"[disabled]="prodform.invalid">Update</button>
+         <br>
+      </form>
+     </div>
+  

@@ -1,0 +1,22 @@
+.tb1{
+    width: 800px;
+}
+.btn1
+{
+    background-color: red;
+}
+.btn2
+{
+    background-color: rgb(204, 204, 14);
+}
+.btn3
+{
+    background-color: rgb(100, 100, 230);
+}
+table{
+    border: 2px black solid;
+}
+.tab
+{
+    margin-top: 60px;
+}

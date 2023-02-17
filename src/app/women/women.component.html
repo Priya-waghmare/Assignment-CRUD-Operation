@@ -1,0 +1,30 @@
+<p>women works!</p>
+<div class="header">
+    <h1>Women Section</h1>
+</div>
+<div class="tab">
+    <table class="table" style="width: 600px;">
+        <tr>
+            <th>Category ID</th>
+            <th>Category name</th>
+            <th>Product ID</th>
+            <th>Product name</th>
+            <th>Delete</th>
+            <th>Update</th>
+        </tr>
+        <tr *ngFor="let data of productlist">
+            <th>{{data.cat_id}}</th>
+            <th>{{data.cat_name}}</th>
+            <th>{{data.prod_id}}</th>
+            <th>{{data.prod_name}}</th>
+             <th><button class="btn" (click)="delprodid(data._id)">DELETE Details</button></th>
+             <th><button class="btn" routerLink="/edit-prod">Update Details</button></th> 
+        </tr>
+        <br><br><br>
+
+        <!-- <button><a routerLink="/add-prod">ADD NEW PRODUCT</a>
+        </button> -->
+
+    </table>
+</div>
+<br><br>
